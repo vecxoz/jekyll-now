@@ -10,7 +10,38 @@ When we start something that involves some kind of randomness we prefere to use 
 Let's seed our blog:
 
 ```python
-import numpy as np
+class BlogSeeder(object):
+    """Class for blog seeding"""
 
-np.random.seed(42)
+    def __init__(self, _seed=0):
+        self._seed = _seed
+
+    @property
+    def seed(self):
+        return self._seed
+
+    @seed.setter
+    def seed(self, new_seed):
+        self._seed = new_seed
+
+    @seed.deleter
+    def seed(self):
+        self._seed = None
+
+    def do_seed(self):
+        np.random.seed(self._seed)
+        print('Seeding completed successfully!')
+
+if __name__ == '__main__':
+    import numpy as np
+    bs = BlogSeeder(42)
+    print('Current seed is: %d' % bs.seed)
+    bs.do_seed()
+```
+
+Result:
+
+```
+Current seed is: 42
+Seeding completed successfully!
 ```
