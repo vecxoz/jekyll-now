@@ -10,11 +10,11 @@ When we start something that involves some kind of randomness we prefere to use 
 Let's seed our blog:
 
 ```python
-class BlogSeeder(object):
-    """Class for blog seeding"""
+class Blog(object):
+    """Blog class"""
 
-    def __init__(self, _seed=0):
-        self._seed = _seed
+    def __init__(self):
+        self._seed = None
 
     @property
     def seed(self):
@@ -23,25 +23,22 @@ class BlogSeeder(object):
     @seed.setter
     def seed(self, new_seed):
         self._seed = new_seed
+        print('Seeding completed successfully!')
 
     @seed.deleter
     def seed(self):
         self._seed = None
-
-    def do_seed(self):
-        np.random.seed(self._seed)
-        print('Seeding completed successfully!')
+        print('Seed is not set!')
 
 if __name__ == '__main__':
-    import numpy as np
-    bs = BlogSeeder(42)
-    print('Current seed is: %d' % bs.seed)
-    bs.do_seed()
+    blog = Blog()
+    blog.seed = 42
+    print('Current seed is: %d' % blog.seed)
 ```
 
 Result:
 
 ```
-Current seed is: 42
 Seeding completed successfully!
+Current seed is: 42
 ```
