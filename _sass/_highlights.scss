@@ -8,12 +8,12 @@ pre.highlight {
   box-shadow: 0px 0px rgba(0,0,0,0.1);
   margin: 20px 0 20px 0;
   overflow: auto;
+  line-height: 80%;
 }
 
 code {
   font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
   font-size: 85%;
-  line-height: 50%;
 }
 
 .highlight .c { color: #999; } /* Comment */
