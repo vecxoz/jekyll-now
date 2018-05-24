@@ -4,4 +4,4 @@ title: About
 permalink: /about/
 ---
 
-Deep Learning blog
+Deep Learning and more
