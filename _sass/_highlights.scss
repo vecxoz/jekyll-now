@@ -8,13 +8,14 @@ pre.highlight {
   box-shadow: 0px 0px rgba(0,0,0,0.1);
   margin: 20px 0 20px 0;
   overflow: auto;
-  line-height: 90%;
+  line-height: 100%;
 }
 
 code {
-  font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace;
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  /* font-family: 'Bitstream Vera Sans Mono', 'Courier', monospace; */
   /* font-family: Menlo, Monaco, "Courier New", monospace; */
-  font-size: 85%;
+  font-size: 80%;
 }
 
 .highlight .c { color: #999; } /* Comment */
